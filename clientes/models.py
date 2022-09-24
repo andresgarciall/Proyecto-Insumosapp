@@ -19,6 +19,7 @@ class Compra(models.Model):
     producto=models.ForeignKey(Producto, on_delete=models.CASCADE, blank=True, null=True)
     fecha_registro=models.DateTimeField(default = datetime.now, blank = True)
 
+
     def __str__(self):
         return f'{self.cliente},  compro: {self.producto}'
 
